@@ -9,6 +9,21 @@ package punto19;
  *
  * @author ASUS
  */
-public class cilindro {
-    
+public class cilindro extends circulo {
+    private double altura;
+
+    public double getAltura() {
+        return altura;
+    }
+
+    public void setAltura() {
+        System.out.println("Ingresar la altura");
+        altura =lector.nextDouble();
+    }
+    public double areaci(){
+        return ((perim()*altura)+(2*area()));
+    }
+    public double volumen(){
+        return area()*altura;
+    }
 }
