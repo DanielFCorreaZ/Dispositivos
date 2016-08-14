@@ -21,30 +21,34 @@ public static void main(String[] args){
         // TODO code application logic here
     int op;
     Scanner lector = new Scanner (System.in);
-    CLIENT client = new CLIENT();
+    Libro libro = new Libro();
+    Disco disco = new Disco();
+    
 do{    
    System.out.println("Digite el numero de la accion a realizar: "); 
    System.out.println("1.Ingresar datos de libro");
    System.out.println("2.Ingresar datos de disco");
-   System.out.println("3.Visualizar disco");
-   System.out.println("4.Visualizar libro");
+   System.out.println("3.Visualizar libro");
+   System.out.println("4.Visualizar disco");
    System.out.println("0.Salir"); 
    op=lector.nextInt();
 switch(op){
     case 0: 
         break;
-    case 1:  client.Loading_Data();
+    case 1:  libro.setNombre();
+             libro.setPrecio();
+             libro.setAño();
+             libro.setNumpag();             
         break;
-    case 2:  client.Data_Show();
+    case 2:  disco.setNombre();
+             disco.setPrecio();
+             disco.setTiempo();
         break;
-    case 3:  client.Actua_Data();
+    case 3:  System.out.println("Nombre: "+libro.getNombre()+" Precio: "+libro.getPrecio()+" Año de publicacion "+libro.getAño()+" Numero de paginas: "+libro.getNumpag());
         break;    
-    case 4:  client.Consig();
+    case 4:  System.out.println("Nombre: "+disco.getNombre()+" Precio: "+disco.getPrecio()+" Duracion en minutos: "+disco.getTiempo());
         break;
-    case 5:  client.Retiro();
-        break;
-    case 6:  client.Consu_Saldo();
-        break; 
+ 
     default: System.out.println("Numero incorrecto"); 
 }  
 }while(op!=0);    

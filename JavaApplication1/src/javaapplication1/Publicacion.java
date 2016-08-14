@@ -5,27 +5,32 @@
  */
 package javaapplication1;
 
+import java.util.Scanner;
+
 /**
  *
  * @author multi05
  */
 public class Publicacion {
-String precio[], nombre[];
+      Scanner lector = new Scanner (System.in);
+private String precio, nombre;
 
-    public String[] getPrecio() {
+    public String getPrecio() {
         return precio;
     }
 
-    public void setPrecio(String[] precio) {
-        this.precio = precio;
+    public void setPrecio() {
+        System.out.println("Ingrese el precio de la obra");
+        precio = lector.next();
     }
 
-    public String[] getNombre() {
+    public String getNombre() {
         return nombre;
     }
 
-    public void setNombre(String[] nombre) {
-        this.nombre = nombre;
+    public void setNombre() {
+        System.out.println("Ingrese el nombre de la obra");
+        nombre = lector.next();
     }
 
 }
